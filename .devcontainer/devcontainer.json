@@ -15,7 +15,30 @@
 				"workbench.colorTheme": "Default Dark Modern"
 			},
 			"extensions": [
-				"codeium.codeium"
+				"codeium.codeium",
+				"esbenp.prettier-vscode",
+				"eamodio.gitlens",
+				"dsznajder.es7-react-js-snippets",
+				"planbcoding.vscode-react-refactor",
+				"bradlc.vscode-tailwindcss",
+				"EditorConfig.EditorConfig",
+				"christian-kohler.npm-intellisense",
+				"streetsidesoftware.code-spell-checker",
+				"usernamehw.errorlens",
+				"christian-kohler.path-intellisense",
+				"traBpUkciP.vscode-npm-scripts",
+				"Orta.vscode-jest",
+				"Arjun.swagger-viewer",
+				"mikestead.dotenv",
+				"humao.rest-client",
+				"rangav.vscode-thunder-client",
+				"pflannery.vscode-versionlens",
+				"alefragnani.project-manager",
+				"johnpapa.vscode-peacock",
+				"ChakrounAnas.turbo-console-log",
+				"ms-vscode-remote.remote-containers",
+				"ms-azuretools.vscode-docker",
+				"ms-vscode-remote.remote-ssh"
 			]
 		}
 	}
