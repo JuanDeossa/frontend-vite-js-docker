@@ -25,3 +25,14 @@ services:
     environment:
       - NODE_ENV=production
     command: ["nginx", "-g", "daemon off;"]
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: npm run test
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=test
