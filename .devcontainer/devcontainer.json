@@ -7,4 +7,16 @@
 	],
 	"service": "devcontainer",
 	"workspaceFolder": "/workspace"
+	,
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"workbench.iconTheme": "material-icon-theme",
+				"workbench.colorTheme": "Default Dark Modern"
+			},
+			"extensions": [
+				"codeium.codeium"
+			]
+		}
+	}
 }
