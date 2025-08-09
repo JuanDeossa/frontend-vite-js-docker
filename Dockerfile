@@ -8,5 +8,6 @@ RUN npm run build
 
 FROM nginx:1.27-alpine AS prod
 COPY --from=build /app/dist /usr/share/nginx/html
-EXPOSE 80
+ARG PORT=80
+EXPOSE $PORT
 CMD ["nginx", "-g", "daemon off;"]

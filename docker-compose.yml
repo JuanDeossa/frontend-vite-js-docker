@@ -21,7 +21,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "${PORT:-80}:80"
     environment:
       - NODE_ENV=production
     command: ["nginx", "-g", "daemon off;"]
