@@ -1,12 +1,40 @@
-# React + Vite
+# Desarrollo con Docker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requisitos
 
-Currently, two official plugins are available:
+- Docker
+- Docker Compose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Levantar el entorno de desarrollo
 
-## Expanding the ESLint configuration
+```bash
+docker compose up dev -d
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Por defecto, el proyecto se expone en el puerto 5173:
+
+```bash
+docker compose up dev -d
+```
+
+#### Usar un puerto personalizado
+
+Puedes definir el puerto que desees usando la variable de entorno `PORT` al ejecutar el comando:
+
+En bash (Linux/Mac):
+
+```bash
+PORT=3005 docker compose up dev -d
+```
+
+En PowerShell (Windows):
+
+```powershell
+$env:PORT=3005; docker compose up dev -d
+```
+
+Luego accede a la app en `http://localhost:PUERTO` (por ejemplo, `http://localhost:3005`).
+
+### Hot reload
+
+Los cambios en el código fuente se reflejan automáticamente en el navegador gracias al volumen montado y la configuración de Vite.
