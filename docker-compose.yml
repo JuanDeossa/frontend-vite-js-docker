@@ -12,3 +12,13 @@ services:
     environment:
       - NODE_ENV=development
     command: npm run dev:docker
+
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    command: ["nginx", "-g", "daemon off;"]
